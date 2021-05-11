@@ -21,6 +21,20 @@
                 }
             }
         },
+        "crossNavigation": {
+            "inbounds": {
+                "FlightAcceptanceCockpit.flightacceptancecockpit-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "FlightAcceptanceCockpit",
+                    "action": "manage",
+                    "title": "Flight Acceptance Cockpit",
+                    "icon": "sap-icon://flight"
+                }
+            }
+        },
         "sourceTemplate": {
             "id": "sap.ui.ui5-template-plugin.2masterdetail",
             "version": "1.67.0"
@@ -248,5 +262,9 @@
 				}
             }
         }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "FlightAcceptanceCockpit.flightacceptancecockpit"
     }
 }
