@@ -23,7 +23,7 @@
         },
         "crossNavigation": {
             "inbounds": {
-                "FlightAcceptanceCockpit.flightacceptancecockpit-inbound": {
+                "com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit-inbound": {
                     "signature": {
                         "parameters": {},
                         "additionalParameters": "allowed"
@@ -88,21 +88,21 @@
                 "preload": true
             },
             "sharedState": {
-				"type": "sap.ui.model.json.JSONModel",
-				"settings": {},
-				"uri": "model/sharedState.json"
-			},
-			"lobs": {
-				"type": "sap.ui.model.json.JSONModel",
-				"settings": {},
-				"uri": "model/lobs.json"
-			},
-			"airportCharges": {
-				"type": "sap.ui.model.json.JSONModel",
-				"settings": {},
-				"uri": "model/airportCharges.json",
-				"preload": true
-			}
+                "type": "sap.ui.model.json.JSONModel",
+                "settings": {},
+                "uri": "model/sharedState.json"
+            },
+            "lobs": {
+                "type": "sap.ui.model.json.JSONModel",
+                "settings": {},
+                "uri": "model/lobs.json"
+            },
+            "airportCharges": {
+                "type": "sap.ui.model.json.JSONModel",
+                "settings": {},
+                "uri": "model/airportCharges.json",
+                "preload": true
+            }
         },
         "resources": {
             "css": [
@@ -120,151 +120,151 @@
                 "controlId": "layout",
                 "controlAggregation": "midColumnPages",
                 "bypassed": {
-					"target": [
-						"notFound"
-					]
-				}
+                    "target": [
+                        "notFound"
+                    ]
+                }
             },
             "routes": [
                 {
-					"pattern": "",
-					"name": "master",
-					"target": [
-						"master"
-					]
-				},
-				{
-					"pattern": "Flight/:arrFlightNo:/:depFlightNo:",
-					"name": "object",
-					"target": [
-						"master",
-						"object"
-					]
-				},
-				{
-					"pattern": "Flight/:objectId:/:flightNo:/Lob/{lobType}",
-					"name": "Lob",
-					"target": [
-						"master",
-						"object",
-						"lob"
-					]
-				},
-				{
-					"pattern": "Flight/:arrFlightNo:/:depFlightNo:/AirportCharges",
-					"name": "AirportCharges",
-					"target": [
-						"master",
-						"object",
-						"airportCharges"
-					]
-				},
-				{
-					"pattern": "Flight/:arrFlightNo:/:depFlightNo:/CargoCharges",
-					"name": "CargoCharges",
-					"target": [
-						"master",
-						"object",
-						"cargoCharges"
-					]
-				},
-				{
-					"pattern": "Flight/:arrFlightNo:/:depFlightNo:/EngServices",
-					"name": "EngServices",
-					"target": [
-						"master",
-						"object",
-						"engServices"
-					]
-				},
-				{
-					"pattern": "Flight/:arrFlightNo:/:depFlightNo:/OverflightServices",
-					"name": "OverflightServices",
-					"target": [
-						"master",
-						"object",
-						"overflightServices"
-					]
-				},
-				{
-					"pattern": "Flight/:arrFlightNo:/:depFlightNo:/Catering",
-					"name": "Catering",
-					"target": [
-						"master",
-						"object",
-						"catering"
-					]
-				}
+                    "pattern": "",
+                    "name": "master",
+                    "target": [
+                        "master"
+                    ]
+                },
+                {
+                    "pattern": "Flight/:arrFlightNo:/:depFlightNo:",
+                    "name": "object",
+                    "target": [
+                        "master",
+                        "object"
+                    ]
+                },
+                {
+                    "pattern": "Flight/:objectId:/:flightNo:/Lob/{lobType}",
+                    "name": "Lob",
+                    "target": [
+                        "master",
+                        "object",
+                        "lob"
+                    ]
+                },
+                {
+                    "pattern": "Flight/:arrFlightNo:/:depFlightNo:/AirportCharges",
+                    "name": "AirportCharges",
+                    "target": [
+                        "master",
+                        "object",
+                        "airportCharges"
+                    ]
+                },
+                {
+                    "pattern": "Flight/:arrFlightNo:/:depFlightNo:/CargoCharges",
+                    "name": "CargoCharges",
+                    "target": [
+                        "master",
+                        "object",
+                        "cargoCharges"
+                    ]
+                },
+                {
+                    "pattern": "Flight/:arrFlightNo:/:depFlightNo:/EngServices",
+                    "name": "EngServices",
+                    "target": [
+                        "master",
+                        "object",
+                        "engServices"
+                    ]
+                },
+                {
+                    "pattern": "Flight/:arrFlightNo:/:depFlightNo:/OverflightServices",
+                    "name": "OverflightServices",
+                    "target": [
+                        "master",
+                        "object",
+                        "overflightServices"
+                    ]
+                },
+                {
+                    "pattern": "Flight/:arrFlightNo:/:depFlightNo:/Catering",
+                    "name": "Catering",
+                    "target": [
+                        "master",
+                        "object",
+                        "catering"
+                    ]
+                }
             ],
             "targets": {
                 "master": {
-					"viewName": "Master",
-					"viewLevel": 1,
-					"viewId": "masterView",
-					"controlAggregation": "beginColumnPages",
-					"title": "Home"
-				},
-				"object": {
-					"viewName": "Detail",
-					"viewId": "detail",
-					"viewLevel": 2,
-					"controlAggregation": "midColumnPages"
-				},
-				"lob": {
-					"viewType": "XML",
-					"viewName": "lob",
-					"viewId": "lob",
-					"viewLevel": 3,
-					"controlAggregation": "midColumnPages"
-				},
-				"airportCharges": {
-					"viewType": "XML",
-					"viewName": "AirportCharges",
-					"viewId": "airportCharges",
-					"viewLevel": 3,
-					"controlAggregation": "midColumnPages"
-				},
-				"cargoCharges": {
-					"viewType": "XML",
-					"viewName": "CargoCharges",
-					"viewId": "cargoCharges",
-					"viewLevel": 3,
-					"controlAggregation": "midColumnPages"
-				},
-				"engServices": {
-					"viewType": "XML",
-					"viewName": "EngServices",
-					"viewId": "engServices",
-					"viewLevel": 3,
-					"controlAggregation": "midColumnPages"
-				},
-				"overflightServices": {
-					"viewType": "XML",
-					"viewName": "OverflightServices",
-					"viewId": "overflightServices",
-					"viewLevel": 3,
-					"controlAggregation": "midColumnPages"
-				},
-				"detailObjectNotFound": {
-					"viewName": "DetailObjectNotFound",
-					"viewId": "detailObjectNotFound",
-					"controlAggregation": "midColumnPages"
-				},
-				"catering": {
-					"viewType": "XML",
-					"viewId": "catering",
-					"viewName": "Catering",
-					"controlAggregation": "midColumnPages"
-				},
-				"notFound": {
-					"viewName": "NotFound",
-					"viewId": "notFound"
-				}
+                    "viewName": "Master",
+                    "viewLevel": 1,
+                    "viewId": "masterView",
+                    "controlAggregation": "beginColumnPages",
+                    "title": "Home"
+                },
+                "object": {
+                    "viewName": "Detail",
+                    "viewId": "detail",
+                    "viewLevel": 2,
+                    "controlAggregation": "midColumnPages"
+                },
+                "lob": {
+                    "viewType": "XML",
+                    "viewName": "lob",
+                    "viewId": "lob",
+                    "viewLevel": 3,
+                    "controlAggregation": "midColumnPages"
+                },
+                "airportCharges": {
+                    "viewType": "XML",
+                    "viewName": "AirportCharges",
+                    "viewId": "airportCharges",
+                    "viewLevel": 3,
+                    "controlAggregation": "midColumnPages"
+                },
+                "cargoCharges": {
+                    "viewType": "XML",
+                    "viewName": "CargoCharges",
+                    "viewId": "cargoCharges",
+                    "viewLevel": 3,
+                    "controlAggregation": "midColumnPages"
+                },
+                "engServices": {
+                    "viewType": "XML",
+                    "viewName": "EngServices",
+                    "viewId": "engServices",
+                    "viewLevel": 3,
+                    "controlAggregation": "midColumnPages"
+                },
+                "overflightServices": {
+                    "viewType": "XML",
+                    "viewName": "OverflightServices",
+                    "viewId": "overflightServices",
+                    "viewLevel": 3,
+                    "controlAggregation": "midColumnPages"
+                },
+                "detailObjectNotFound": {
+                    "viewName": "DetailObjectNotFound",
+                    "viewId": "detailObjectNotFound",
+                    "controlAggregation": "midColumnPages"
+                },
+                "catering": {
+                    "viewType": "XML",
+                    "viewId": "catering",
+                    "viewName": "Catering",
+                    "controlAggregation": "midColumnPages"
+                },
+                "notFound": {
+                    "viewName": "NotFound",
+                    "viewId": "notFound"
+                }
             }
         }
     },
     "sap.cloud": {
         "public": true,
-        "service": "FlightAcceptanceCockpit.flightacceptancecockpit"
+        "service": "com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit"
     }
 }
