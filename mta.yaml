@@ -1,94 +1,94 @@
-_schema-version: "3.2"
+_schema-version: '3.2'
 ID: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
 description: Flight Acceptance Cockpit
 version: 0.0.1
 modules:
-- name: com-legstate-fts-app-FlightAcceptance-dest-content
-  type: com.sap.application.content
-  requires:
-  - name: com-legstate-fts-app-FlightAcceptanceCoc-dest-srv
-    parameters:
-      content-target: true
-  - name: com-legstate-fts-app-FlightAcceptanc-repo-host
-    parameters:
-      service-key:
-        name: com-legstate-fts-app-FlightAcceptanc-repo-host-key
-  - name: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa
-    parameters:
-      service-key:
-        name: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa-key
-  parameters:
-    content:
-      instance:
-        destinations:
-        - Name: com-legstate-fts-app-FlightAcceptanceCoc_repo_host
-          ServiceInstanceName: com-legstate-fts-app-FlightAcceptanceCoc-html5-srv
-          ServiceKeyName: com-legstate-fts-app-FlightAcceptanc-repo-host-key
-          sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
-        - Authentication: OAuth2UserTokenExchange
-          Name: com-legstate-fts-app-FlightAcceptanceCockpit-f_uaa
-          ServiceInstanceName: com-legstate-fts-app-FlightAcceptanceCoc-xsuaa-srv
-          ServiceKeyName: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa-key
-          sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
-        existing_destinations_policy: ignore
-  build-parameters:
-    no-source: true
-- name: com-legstate-fts-app-FlightAcceptanceC-app-content
-  type: com.sap.application.content
-  path: .
-  requires:
-  - name: com-legstate-fts-app-FlightAcceptanc-repo-host
-    parameters:
-      content-target: true
-  build-parameters:
-    build-result: resources
+  - name: com-legstate-fts-app-FlightAcceptance-dest-content
+    type: com.sap.application.content
     requires:
-    - artifacts:
-      - comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit.zip
-      name: comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit
-      target-path: resources/
-- name: comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit
-  type: html5
-  path: .
-  build-parameters:
-    build-result: dist
-    builder: custom
-    commands:
-    - npm install
-    - npm run build:cf
-    supported-platforms: []
-resources:
-- name: com-legstate-fts-app-FlightAcceptanceCoc-dest-srv
-  type: org.cloudfoundry.managed-service
-  parameters:
-    config:
-      HTML5Runtime_enabled: true
-      init_data:
+      - name: com-legstate-fts-app-FlightAcceptanceCoc-dest-srv
+        parameters:
+          content-target: true
+      - name: com-legstate-fts-app-FlightAcceptanc-repo-host
+        parameters:
+          service-key:
+            name: com-legstate-fts-app-FlightAcceptanc-repo-host-key
+      - name: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa
+        parameters:
+          service-key:
+            name: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa-key
+    parameters:
+      content:
         instance:
           destinations:
-          - Authentication: NoAuthentication
-            Name: ui5
-            ProxyType: Internet
-            Type: HTTP
-            URL: https://ui5.sap.com
-          existing_destinations_policy: update
-      version: 1.0.0
-    service: destination
-    service-name: com-legstate-fts-app-FlightAcceptanceCoc-dest-srv
-    service-plan: lite
-- name: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa
-  type: org.cloudfoundry.managed-service
-  parameters:
-    path: ./xs-security.json
-    service: xsuaa
-    service-name: com-legstate-fts-app-FlightAcceptanceCoc-xsuaa-srv
-    service-plan: application
-- name: com-legstate-fts-app-FlightAcceptanc-repo-host
-  type: org.cloudfoundry.managed-service
-  parameters:
-    service: html5-apps-repo
-    service-name: com-legstate-fts-app-FlightAcceptanceCoc-html5-srv
-    service-plan: app-host
+            - Name: com-legstate-fts-app-FlightAcceptanceCoc_repo_host
+              ServiceInstanceName: com-legstate-fts-app-FlightAcceptanceCoc-html5-srv
+              ServiceKeyName: com-legstate-fts-app-FlightAcceptanc-repo-host-key
+              sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
+            - Authentication: OAuth2UserTokenExchange
+              Name: com-legstate-fts-app-FlightAcceptanceCockpit-f_uaa
+              ServiceInstanceName: com-legstate-fts-app-FlightAcceptanceCoc-xsuaa-srv
+              ServiceKeyName: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa-key
+              sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
+          existing_destinations_policy: ignore
+    build-parameters:
+      no-source: true
+  - name: com-legstate-fts-app-FlightAcceptanceC-app-content
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: com-legstate-fts-app-FlightAcceptanc-repo-host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - artifacts:
+            - comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit.zip
+          name: comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit
+          target-path: resources/
+  - name: comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit
+    type: html5
+    path: .
+    build-parameters:
+      build-result: dist
+      builder: custom
+      commands:
+        - npm install
+        - 'npm run build:cf'
+      supported-platforms: []
+resources:
+  - name: com-legstate-fts-app-FlightAcceptanceCoc-dest-srv
+    type: org.cloudfoundry.managed-service
+    parameters:
+      config:
+        HTML5Runtime_enabled: true
+        init_data:
+          instance:
+            destinations:
+              - Authentication: NoAuthentication
+                Name: ui5
+                ProxyType: Internet
+                Type: HTTP
+                URL: 'https://ui5.sap.com'
+            existing_destinations_policy: update
+        version: 1.0.0
+      service: destination
+      service-name: com-legstate-fts-app-FlightAcceptanceCoc-dest-srv
+      service-plan: lite
+  - name: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: ./xs-security.json
+      service: xsuaa
+      service-name: com-legstate-fts-app-FlightAcceptanceCoc-xsuaa-srv
+      service-plan: application
+  - name: com-legstate-fts-app-FlightAcceptanc-repo-host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-name: com-legstate-fts-app-FlightAcceptanceCoc-html5-srv
+      service-plan: app-host
 parameters:
   deploy_mode: html5-repo
   enable-parallel-deployments: true
