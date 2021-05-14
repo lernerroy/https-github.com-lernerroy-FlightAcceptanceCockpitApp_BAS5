@@ -34,8 +34,19 @@ sap.ui.define([
 			this.getOwnerComponent().getModel().attachMetadataFailed(fnSetAppNotBusy);
 
 			// apply content density mode to root view
-			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
-		}
+            this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+            
+            this.imageModelUpdateLPD();
+        },
+        
+        imageModelUpdateLPD: function() {  
+            var aModelLobs = this.getOwnerComponent().getModel("lobs").getData();
+            var vModulePath = jQuery.sap.getModulePath("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit");
+            aModelLobs.forEach(element => {
+                element.imageSrc = vModulePath + element.imageSrc;
+            });
+            this.getOwnerComponent().getModel("lobs").setData(aModelLobs);
+        }
 
 	});
 });
