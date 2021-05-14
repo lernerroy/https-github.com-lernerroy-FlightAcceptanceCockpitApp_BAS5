@@ -12,7 +12,7 @@ server:
       backend:
       - path: /sap
         url: http://l-s.ddns.net:5000
-        destination: DAK_1
+        destination: TAP_QA
       ui5:
         path: 
         - /resources
