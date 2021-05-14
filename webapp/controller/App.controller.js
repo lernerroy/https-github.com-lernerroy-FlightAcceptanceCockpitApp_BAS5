@@ -37,9 +37,8 @@ sap.ui.define([
             this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
             
             this.imageModelUpdateLPD();
-
         },
-
+    
         imageModelUpdateLPD: function() {  
             var aModelLobs = this.getOwnerComponent().getModel("lobs").getData();
             var vModulePath = jQuery.sap.getModulePath("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit");
