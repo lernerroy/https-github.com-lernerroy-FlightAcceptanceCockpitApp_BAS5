@@ -47,7 +47,7 @@ sap.ui.define([
 			IconPool.addIcon("airplane", "fa", {
 				fontFamily: "FontAwesome",
 				content: "f072"
-			});				
+            });
 		},
 
 		/**
@@ -83,7 +83,7 @@ sap.ui.define([
 				}
 			}
 			return this._sContentDensityClass;
-		}
+        }
 
 	});
 });
