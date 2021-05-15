@@ -5,7 +5,7 @@
     {
       "source": "^/sap/(.*)$",
       "target": "/sap/$1",
-      "destination": "DAK_1",
+      "destination": "TAP_QA",
       "authenticationType": "xsuaa",
       "csrfProtection": false
     },
