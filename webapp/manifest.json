@@ -1,7 +1,7 @@
 {
     "_version": "1.32.0",
     "sap.app": {
-        "id": "com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit",
+        "id": "com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -23,7 +23,7 @@
         },
         "crossNavigation": {
             "inbounds": {
-                "com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit-inbound": {
+                "com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit_av-inbound": {
                     "signature": {
                         "parameters": {},
                         "additionalParameters": "allowed"
@@ -59,7 +59,7 @@
     "sap.ui5": {
         "flexEnabled": false,
         "rootView": {
-            "viewName": "com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.view.App",
+            "viewName": "com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.view.App",
             "type": "XML",
             "async": true,
             "id": "App"
@@ -80,7 +80,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.i18n.i18n"
+                    "bundleName": "com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.i18n.i18n"
                 }
             },
             "": {
@@ -116,7 +116,7 @@
                 "routerClass": "sap.f.routing.Router",
                 "viewType": "XML",
                 "async": true,
-                "viewPath": "com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.view",
+                "viewPath": "com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.view",
                 "controlId": "layout",
                 "controlAggregation": "midColumnPages",
                 "bypassed": {
@@ -265,6 +265,6 @@
     },
     "sap.cloud": {
         "public": true,
-        "service": "com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit"
+        "service": "com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit_av"
     }
 }

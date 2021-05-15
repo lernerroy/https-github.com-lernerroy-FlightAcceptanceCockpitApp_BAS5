@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (Controller) {
 	"use strict";
 
-	return Controller.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.Catering", {
+	return Controller.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.Catering", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

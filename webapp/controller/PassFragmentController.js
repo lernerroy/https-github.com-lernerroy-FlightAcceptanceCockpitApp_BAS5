@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (Controller) {
 	"use strict";
 
-	return Controller.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.PassFragmentController", {
+	return Controller.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.PassFragmentController", {
 		constructor: function(oController) {
 			this._oController = oController;
 			return Controller.call(this);

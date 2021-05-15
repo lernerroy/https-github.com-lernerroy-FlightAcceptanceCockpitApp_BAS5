@@ -14,7 +14,7 @@ sap.ui.define([
 	Constants) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.Master", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.Master", {
 
 		formatter: formatter,
 

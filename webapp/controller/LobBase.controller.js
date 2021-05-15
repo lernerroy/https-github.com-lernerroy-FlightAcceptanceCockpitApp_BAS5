@@ -2,15 +2,15 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"./BaseController",
 	"sap/ui/model/json/JSONModel",
-	"com/legstate/fts/app/FlightAcceptanceCockpit/flightacceptancecockpit/vendor/lodash.min",
+	"com/legstate/fts/app/FlightAcceptanceCockpit/flightacceptancecockpit_av/vendor/lodash.min",
 	"../constants/Constants",
-	"com/legstate/fts/app/FlightAcceptanceCockpit/flightacceptancecockpit/dialog/BusyDialogController",
+	"com/legstate/fts/app/FlightAcceptanceCockpit/flightacceptancecockpit_av/dialog/BusyDialogController",
 	"sap/m/MessageBox",
 	"sap/m/MessageToast"
 ], function (Controller, BaseController, JSONModel, lodash, Constants, BusyDialog, MessageBox, MessageToast) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.LobBase", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.LobBase", {
 
 		// ========================= Common Setup/Init =========================
 

@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller, History) {
 	"use strict";
 
-	return Controller.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.BaseController", {
+	return Controller.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.BaseController", {
 		/**
 		 * Convenience method for accessing the router in every controller of the application.
 		 * @public

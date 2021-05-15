@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (BaseController, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.App", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.App", {
 
 		onInit : function () {
 			var oViewModel,

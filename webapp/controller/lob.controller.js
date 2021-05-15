@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (BaseController, JSONModel, Controller, PassangerFragmentController) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.lob", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_Av.controller.lob", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

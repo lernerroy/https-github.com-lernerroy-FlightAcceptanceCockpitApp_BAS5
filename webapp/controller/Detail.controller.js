@@ -11,7 +11,7 @@ sap.ui.define([
 	// shortcut for sap.m.URLHelper
 	var URLHelper = mobileLibrary.URLHelper;
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.Detail", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.Detail", {
 
 		formatter: formatter,
 

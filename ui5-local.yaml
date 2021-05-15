@@ -1,6 +1,6 @@
 specVersion: '2.0'
 metadata:
-  name: 'flightacceptancecockpit'
+  name: 'flightacceptancecockpit_av'
 type: application
 framework:
   name: SAPUI5
@@ -24,7 +24,7 @@ server:
       backend:
       - path: /sap
         url: http://l-s.ddns.net:5000
-        destination: DAK_1
+        destination: AV_QA
   - name: fiori-tools-appreload
     afterMiddleware: compression
     configuration:
