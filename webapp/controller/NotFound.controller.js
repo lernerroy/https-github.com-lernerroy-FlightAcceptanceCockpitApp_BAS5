@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (BaseController) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.NotFound", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.tp.controller.NotFound", {
 
 		onInit: function () {
 			this.getRouter().getTarget("notFound").attachDisplay(this._onNotFoundDisplayed, this);

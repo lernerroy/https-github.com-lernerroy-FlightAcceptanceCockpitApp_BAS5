@@ -1,6 +1,6 @@
 specVersion: '1.0'
 metadata:
-  name: 'flightacceptancecockpit'
+  name: 'flightacceptancecockpit_tp'
 type: application
 ui5Theme: sap_fiori_3
 server:

@@ -8,7 +8,7 @@ sap.ui.define([
 ], function (UIComponent, Device, models, ListSelector, ErrorHandler, IconPool) {
 	"use strict";
 
-	return UIComponent.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.Component", {
+	return UIComponent.extend("com.legstate.fts.app.FlightAcceptanceCockpit.tp.Component", {
 
 		metadata : {
 			manifest : "json"

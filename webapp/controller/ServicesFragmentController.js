@@ -5,7 +5,7 @@ sap.ui.define([
 ], function (Controller, Constants, Filter) {
 	"use strict";
 
-	return Controller.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.ServicesFragmentController", {
+	return Controller.extend("com.legstate.fts.app.FlightAcceptanceCockpit.tp.controller.ServicesFragmentController", {
 		constructor: function (oController, oDataModel) {
 			this._oController = oController;
 			this._oDataModel = oDataModel;

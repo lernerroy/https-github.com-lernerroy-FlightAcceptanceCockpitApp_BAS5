@@ -1,5 +1,5 @@
 {
-  "xsappname": "comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit",
+  "xsappname": "comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit_tp",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
   "scopes": [

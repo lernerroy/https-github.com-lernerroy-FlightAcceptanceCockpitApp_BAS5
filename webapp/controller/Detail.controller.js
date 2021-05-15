@@ -11,7 +11,7 @@ sap.ui.define([
 	// shortcut for sap.m.URLHelper
 	var URLHelper = mobileLibrary.URLHelper;
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.Detail", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.tp.controller.Detail", {
 
 		formatter: formatter,
 
@@ -352,7 +352,7 @@ sap.ui.define([
 
 		_createOverallStatusesPopover: function () {
 			if (!this._oInteracesPopOver) {
-				this._oInteracesPopOver = sap.ui.xmlfragment("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.fragments.InterfacesStatus", this);
+				this._oInteracesPopOver = sap.ui.xmlfragment("com.legstate.fts.app.FlightAcceptanceCockpit.tp.fragments.InterfacesStatus", this);
 			}
 
 			this.getView().addDependent(this._oInteracesPopOver);

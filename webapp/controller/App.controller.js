@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (BaseController, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.App", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.tp.controller.App", {
 
 		onInit : function () {
 			var oViewModel,
@@ -41,7 +41,7 @@ sap.ui.define([
         
         imageModelUpdateLPD: function() {  
             var aModelLobs = this.getOwnerComponent().getModel("lobs").getData();
-            var vModulePath = jQuery.sap.getModulePath("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit");
+            var vModulePath = jQuery.sap.getModulePath("com.legstate.fts.app.FlightAcceptanceCockpit.tp");
             aModelLobs.forEach(element => {
                 element.imageSrc = vModulePath + element.imageSrc;
             });

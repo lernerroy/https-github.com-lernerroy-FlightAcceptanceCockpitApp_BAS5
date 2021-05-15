@@ -4,7 +4,7 @@ sap.ui.define([
 ], function(Object, JSONModel){
 	"use strict";
 	
-	return Object.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.dialog.BusyDialogController",{
+	return Object.extend("com.legstate.fts.app.FlightAcceptanceCockpit.tp.dialog.BusyDialogController",{
 		
 		constructor: function(sTitle,sMessage)	{
 			this.sTitle = sTitle;
@@ -13,7 +13,7 @@ sap.ui.define([
 		
 		present: function(oHostView){
 			if (!this._dialog) {
-				this._dialog = sap.ui.xmlfragment("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.dialog.BusyDialog", this);
+				this._dialog = sap.ui.xmlfragment("com.legstate.fts.app.FlightAcceptanceCockpit.tp.dialog.BusyDialog", this);
 				oHostView.addDependent(this._dialog);
 			}	
 			
