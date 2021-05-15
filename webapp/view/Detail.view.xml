@@ -1,6 +1,6 @@
 <mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:semantic="sap.f.semantic" xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.f" xmlns:grid="sap.ui.layout.cssgrid"
-	controllerName="com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.Detail">
+	controllerName="com.legstate.fts.app.FlightAcceptanceCockpit.av.controller.Detail">
 	<semantic:SemanticPage id="detailPage" busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
 			<uxap:ObjectPageLayout id="objectPageLayout" enableLazyLoading="false" subSectionLayout="TitleOnLeft" showTitleInHeaderContent="false"

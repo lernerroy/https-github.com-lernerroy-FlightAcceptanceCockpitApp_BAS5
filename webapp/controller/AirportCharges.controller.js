@@ -5,12 +5,12 @@ sap.ui.define([
 	"sap/ui/model/Filter",
 	"sap/ui/core/Fragment",
 	"../constants/Constants",
-	"com/legstate/fts/app/FlightAcceptanceCockpit/flightacceptancecockpit_av/vendor/lodash.min",
+	"com/legstate/fts/app/FlightAcceptanceCockpit/av/vendor/lodash.min",
 	"sap/m/MessageBox"
 ], function (Controller, LobBase, JSONModel, Filter, Fragment, Constants, lodash, MessageBox) {
 	"use strict";
 
-	return LobBase.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.AirportCharges", {
+	return LobBase.extend("com.legstate.fts.app.FlightAcceptanceCockpit.av.controller.AirportCharges", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

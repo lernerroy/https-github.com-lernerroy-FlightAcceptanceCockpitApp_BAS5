@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (Controller, LobBase, JSONModel ,Constants) {
 	"use strict";
 
-	return LobBase.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_av.controller.CargoCharges", {
+	return LobBase.extend("com.legstate.fts.app.FlightAcceptanceCockpit.av.controller.CargoCharges", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

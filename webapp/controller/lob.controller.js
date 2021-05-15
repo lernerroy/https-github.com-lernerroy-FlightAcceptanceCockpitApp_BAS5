@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (BaseController, JSONModel, Controller, PassangerFragmentController) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit_Av.controller.lob", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.av.controller.lob", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -88,7 +88,7 @@ sap.ui.define([
 		 * */
 		_addAirportChargesContent: function(sObjectPath){
 			var oPassangerFragmentController = new PassangerFragmentController(this);
-			var oPassangerFragment = sap.ui.xmlfragment("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.fragments.PassangerDetails", oPassangerFragmentController);
+			var oPassangerFragment = sap.ui.xmlfragment("com.legstate.fts.app.FlightAcceptanceCockpit.av.fragments.PassangerDetails", oPassangerFragmentController);
 			this._getContentContainer().addContent(oPassangerFragment);	
 			
 			var sPath = sObjectPath + "/FlightSegmentHeaderInboundPax";
