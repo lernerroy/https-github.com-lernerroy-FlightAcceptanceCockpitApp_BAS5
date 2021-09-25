@@ -226,13 +226,13 @@ sap.ui.define([
 			// data we have in the flight segment for the specific direction 
 
 			var oInterfaceStatusModel = new JSONModel([{
-				name: "Passanger",
+				name: this.getOwnerComponent().getModel("i18n").getProperty("passenger"),
 				status: sDirection === Constants.FlightSegmentType.ARRIVAL ? oFlightSegment.PrePssLight : oFlightSegment.PssLight
 			}, {
-				name: "Cargo",
+				name: this.getOwnerComponent().getModel("i18n").getProperty("cargo"),
 				status: sDirection === Constants.FlightSegmentType.ARRIVAL ? oFlightSegment.PreCargoLight : oFlightSegment.CargoLight
 			}, {
-				name: "Overfly",
+				name: this.getOwnerComponent().getModel("i18n").getProperty("overpass"),
 				status: sDirection === Constants.FlightSegmentType.ARRIVAL ? oFlightSegment.PreCfpLight : oFlightSegment.CfpLight
 			}]);
 
@@ -383,7 +383,14 @@ sap.ui.define([
 				// reset to previous layout
 				this.getModel("appView").setProperty("/layout", this.getModel("appView").getProperty("/previousLayout"));
 			}
-		}
+        },
+
+        onNavigateToTrip: function(oEvent) {
+            var vTrip = oEvent.getSource().getText();
+            this.getRouter().navTo("Trip", {
+                FlightNo: vTrip
+            });
+        }
 	});
 
 });
