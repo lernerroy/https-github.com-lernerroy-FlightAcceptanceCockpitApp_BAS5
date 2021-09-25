@@ -9,7 +9,7 @@ modules:
       - name: com-legstate-fts-app-FlightAcceptance_sm-dest-srv
         parameters:
           content-target: true
-      - name: com-legstate-fts-app-FlightAcceptanc-repo-host
+      - name: com-legstate-fts-app-FlightAcceptance_sm-repo-host
         parameters:
           service-key:
             name: com-legstate-fts-app-FlightAccept_sm-repo-host-key
@@ -37,17 +37,17 @@ modules:
     type: com.sap.application.content
     path: .
     requires:
-      - name: com-legstate-fts-app-FlightAcceptanc-repo-host
+      - name: com-legstate-fts-app-FlightAcceptance_sm-repo-host
         parameters:
           content-target: true
     build-parameters:
       build-result: resources
       requires:
         - artifacts:
-            - comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit.zip
-          name: comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit
+            - comlegstateftsappFlightAcceptanceCockpitflightacceptancecock_sm.zip
+          name: comlegstateftsappFlightAcceptanceCockpitflightacceptancecock_sm
           target-path: resources/
-  - name: comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit
+  - name: comlegstateftsappFlightAcceptanceCockpitflightacceptancecock_sm
     type: html5
     path: .
     build-parameters:
@@ -83,7 +83,7 @@ resources:
       service: xsuaa
       service-name: com-legstate-fts-app-FlightAcceptance_sm-xsuaa-srv
       service-plan: application
-  - name: com-legstate-fts-app-FlightAcceptanc-repo-host
+  - name: com-legstate-fts-app-FlightAcceptance_sm-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
