@@ -2,7 +2,7 @@
     "name": "flightacceptancecockpit",
     "version": "0.0.1",
     "private": true,
-    "description": "Flight Acceptance Cockpit",
+    "description": "Flight Acceptance Screen",
     "keywords": [
         "ui5",
         "openui5",
