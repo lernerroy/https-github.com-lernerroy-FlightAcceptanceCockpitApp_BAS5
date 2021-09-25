@@ -6,7 +6,7 @@
 			<uxap:ObjectPageLayout id="objectPageLayout" enableLazyLoading="false" subSectionLayout="TitleOnLeft" showTitleInHeaderContent="false"
 				showHeaderContent="true">
 				<uxap:headerTitle>
-					<uxap:ObjectPageHeader objectImageURI="sap-icon://fa/departure" objectImageShape="Circle" objectTitle="Flight Acceptance Screen"
+					<uxap:ObjectPageHeader objectImageURI="sap-icon://fa/airplane" objectImageShape="Circle" objectTitle="{i18n>TIT_FLIGHT_ORDER_TXT}"
 						id="ObjectPageLayoutHeaderTitle" isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true"
 						isActionAreaAlwaysVisible="true" showPlaceholder="true">
 						<uxap:actions/>

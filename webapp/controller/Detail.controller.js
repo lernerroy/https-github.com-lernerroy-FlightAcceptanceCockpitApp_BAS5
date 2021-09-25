@@ -200,7 +200,6 @@ sap.ui.define([
 					oLob.active = false;
 					break;
                 }
-                oLob.active = true;
 			});
 
 		},
