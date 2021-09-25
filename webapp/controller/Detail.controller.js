@@ -199,7 +199,8 @@ sap.ui.define([
 				default:
 					oLob.active = false;
 					break;
-				}
+                }
+                oLob.active = true;
 			});
 
 		},

@@ -22,7 +22,7 @@ modules:
         instance:
           destinations:
             - Name: com-legstate-fts-app-FlightAcceptanceCoc_repo_host
-              ServiceInstanceName: com-legstate-fts-app-FlightAcceptanceCoc-html5-srv
+              ServiceInstanceName: com-legstate-fts-app-FlightAcceptanceSum-html5-srv
               ServiceKeyName: com-legstate-fts-app-FlightAcceptanc-repo-host-key
               sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
             - Authentication: OAuth2UserTokenExchange
@@ -87,7 +87,7 @@ resources:
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
-      service-name: com-legstate-fts-app-FlightAcceptanceCoc-html5-srv
+      service-name: com-legstate-fts-app-FlightAcceptanceSum-html5-srv
       service-plan: app-host
 parameters:
   deploy_mode: html5-repo
