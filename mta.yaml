@@ -6,13 +6,13 @@ modules:
   - name: com-legstate-fts-app-FlightAcceptance-dest-content
     type: com.sap.application.content
     requires:
-      - name: com-legstate-fts-app-FlightAcceptanceSum-dest-srv
+      - name: com-legstate-fts-app-FlightAcceptance_sm-dest-srv
         parameters:
           content-target: true
       - name: com-legstate-fts-app-FlightAcceptanc-repo-host
         parameters:
           service-key:
-            name: com-legstate-fts-app-FlightAcceptanc-repo-host-key
+            name: com-legstate-fts-app-FlightAccept_sm-repo-host-key
       - name: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa
         parameters:
           service-key:
@@ -22,18 +22,18 @@ modules:
         instance:
           destinations:
             - Name: com-legstate-fts-app-FlightAcceptanceCoc_repo_host
-              ServiceInstanceName: com-legstate-fts-app-FlightAcceptanceSum-html5-srv
-              ServiceKeyName: com-legstate-fts-app-FlightAcceptanc-repo-host-key
+              ServiceInstanceName: com-legstate-fts-app-FlightAcceptance_sm-html5-srv
+              ServiceKeyName: com-legstate-fts-app-FlightAccept_sm-repo-host-key
               sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
             - Authentication: OAuth2UserTokenExchange
               Name: com-legstate-fts-app-FlightAcceptanceCockpit-f_uaa
-              ServiceInstanceName: com-legstate-fts-app-FlightAcceptanceSum-xsuaa-srv
+              ServiceInstanceName: com-legstate-fts-app-FlightAcceptance_sm-xsuaa-srv
               ServiceKeyName: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa-key
               sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
           existing_destinations_policy: ignore
     build-parameters:
       no-source: true
-  - name: com-legstate-fts-app-FlightAcceptanceC-app-content
+  - name: com-legstate-fts-app-FlightAcceptan_sm-app-content
     type: com.sap.application.content
     path: .
     requires:
@@ -58,7 +58,7 @@ modules:
         - 'npm run build:cf'
       supported-platforms: []
 resources:
-  - name: com-legstate-fts-app-FlightAcceptanceSum-dest-srv
+  - name: com-legstate-fts-app-FlightAcceptance_sm-dest-srv
     type: org.cloudfoundry.managed-service
     parameters:
       config:
@@ -74,20 +74,20 @@ resources:
             existing_destinations_policy: update
         version: 1.0.0
       service: destination
-      service-name: com-legstate-fts-app-FlightAcceptanceSum-dest-srv
+      service-name: com-legstate-fts-app-FlightAcceptance_sm-dest-srv
       service-plan: lite
   - name: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa
     type: org.cloudfoundry.managed-service
     parameters:
       path: ./xs-security.json
       service: xsuaa
-      service-name: com-legstate-fts-app-FlightAcceptanceSum-xsuaa-srv
+      service-name: com-legstate-fts-app-FlightAcceptance_sm-xsuaa-srv
       service-plan: application
   - name: com-legstate-fts-app-FlightAcceptanc-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
-      service-name: com-legstate-fts-app-FlightAcceptanceSum-html5-srv
+      service-name: com-legstate-fts-app-FlightAcceptance_sm-html5-srv
       service-plan: app-host
 parameters:
   deploy_mode: html5-repo
