@@ -22,6 +22,6 @@ builder:
   - name: ui5-task-zipper
     afterTask: generateCachebusterInfo
     configuration:
-      archiveName: comlegstateftsappFlightAcceptanceCockpitflightacceptancecockpit
+      archiveName: comlegstateftsappFlightAcceptanceCockpitflightacceptancecock_sm
       additionalFiles:
       - xs-app.json

@@ -151,6 +151,13 @@
                     ]
                 },
                 {
+                    "pattern": "Trips/:FlightNo:",
+                    "name": "Trip",
+                    "target": [
+                        "trip"
+                    ]
+                },
+                {
                     "pattern": "Flight/:arrFlightNo:/:depFlightNo:/AirportCharges",
                     "name": "AirportCharges",
                     "target": [
@@ -195,6 +202,8 @@
                         "catering"
                     ]
                 }
+                
+
             ],
             "targets": {
                 "master": {
@@ -259,6 +268,13 @@
                 "notFound": {
                     "viewName": "NotFound",
                     "viewId": "notFound"
+                },
+                "trip": {
+                    "viewType": "XML",
+                    "viewName": "Trip",
+                    "viewId": "trip",
+                    "viewLevel": 3,
+                    "controlAggregation": "endColumnPages"
                 }
             }
         }
