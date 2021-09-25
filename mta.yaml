@@ -1,5 +1,5 @@
 _schema-version: '3.2'
-ID: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
+ID: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit_sm
 description: Flight Acceptance Cockpit
 version: 0.0.1
 modules:
@@ -24,12 +24,12 @@ modules:
             - Name: com-legstate-fts-app-FlightAcceptanceCoc_repo_host
               ServiceInstanceName: com-legstate-fts-app-FlightAcceptance_sm-html5-srv
               ServiceKeyName: com-legstate-fts-app-FlightAccept_sm-repo-host-key
-              sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
+              sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit_sm
             - Authentication: OAuth2UserTokenExchange
               Name: com-legstate-fts-app-FlightAcceptanceCockpit-f_uaa
               ServiceInstanceName: com-legstate-fts-app-FlightAcceptance_sm-xsuaa-srv
               ServiceKeyName: com-legstate-fts-app-FlightAcceptanceCockpit-f-uaa-key
-              sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
+              sap.cloud.service: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit_sm
           existing_destinations_policy: ignore
     build-parameters:
       no-source: true
