@@ -9,7 +9,7 @@
 |**Service Type**<br>SAP System (ABAP On Premise)|
 |**Service URL**<br>http://l-s.ddns.net:5000/sap/opu/odata/sap/ZGW_LS_FO_SERVICES_SRV
 |**Module Name**<br>flightacceptancecockpit|
-|**Application Title**<br>Flight Acceptance Cockpit|
+|**Application Title**<br>Flight Acceptance Screen|
 |**Namespace**<br>com.legstate.fts.app.FlightAcceptanceCockpit|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>Latest|

@@ -1,6 +1,6 @@
 _schema-version: '3.2'
 ID: com-legstate-fts-app-FlightAcceptanceCockpit-flightacceptancecockpit
-description: Flight Acceptance Cockpit
+description: Flight Acceptance Screen
 version: 0.0.1
 modules:
   - name: com-legstate-fts-app-FlightAcceptance-dest-content

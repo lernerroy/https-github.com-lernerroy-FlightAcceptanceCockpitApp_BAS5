@@ -30,7 +30,7 @@
                     },
                     "semanticObject": "FlightAcceptanceCockpit",
                     "action": "manage",
-                    "title": "Flight Acceptance Cockpit",
+                    "title": "Flight Acceptance Screen",
                     "icon": "sap-icon://flight"
                 }
             }
