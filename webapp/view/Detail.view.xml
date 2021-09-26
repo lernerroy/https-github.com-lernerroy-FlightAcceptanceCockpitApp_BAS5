@@ -109,7 +109,7 @@
 										<CustomListItem press=".onLobSelected" visible="{lobs>active}" type="Navigation" class="sapUiTinyMargin lob-card" highlight="None">
 											<HBox justifyContent="Start" fitContainer="true" alignItems="Center" class="sapUiSmallMargin" alignContent="Center">
 												<Image height="3rem" width="3rem" src="{lobs>imageSrc}" visible="{= ${device>/system/phone} ? false : true}" class="sapUiSmallMarginEnd"/>
-												<Title text="{lobs>title}" level="H5" titleStyle="H5" class="sapUiSmallMarginEnd"/>
+												<Title text="{lobs>title}" level="H5" titleStyle="H5" class="sapUiSmallMarginEnd" wrapping="true"/>
 											</HBox>
 										</CustomListItem>
 									</l:Grid>
