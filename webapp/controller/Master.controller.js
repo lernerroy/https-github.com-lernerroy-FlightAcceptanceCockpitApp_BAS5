@@ -14,7 +14,7 @@ sap.ui.define([
 	Constants) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.Master", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.av.controller.Master", {
 
 		formatter: formatter,
 
@@ -126,7 +126,7 @@ sap.ui.define([
 			
 			// load asynchronous XML fragment
 			if (!oDialog) {
-				oDialog = sap.ui.xmlfragment(this.getView().getId(), "com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.view.ViewSettingsDialog", this);
+				oDialog = sap.ui.xmlfragment(this.getView().getId(), "com.legstate.fts.app.FlightAcceptanceCockpit.av.view.ViewSettingsDialog", this);
 				oDialog.addStyleClass(this.getOwnerComponent().getContentDensityClass());
 				this.getView().addDependent(oDialog);
 			} 

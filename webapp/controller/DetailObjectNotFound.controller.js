@@ -3,5 +3,5 @@ sap.ui.define([
 ], function (BaseController) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.DetailObjectNotFound", {});
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.av.controller.DetailObjectNotFound", {});
 });

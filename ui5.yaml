@@ -1,6 +1,6 @@
 specVersion: '1.0'
 metadata:
-  name: 'flightacceptancecockpit'
+  name: 'flightacceptancecockpit_av'
 type: application
 ui5Theme: sap_fiori_3
 server:
@@ -12,7 +12,7 @@ server:
       backend:
       - path: /sap
         url: http://l-s.ddns.net:5000
-        destination: DAK_1
+        destination: AV_QA
       ui5:
         path: 
         - /resources

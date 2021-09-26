@@ -2,15 +2,15 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"./BaseController",
 	"sap/ui/model/json/JSONModel",
-	"com/legstate/fts/app/FlightAcceptanceCockpit/flightacceptancecockpit/vendor/lodash.min",
+	"com/legstate/fts/app/FlightAcceptanceCockpit/av/vendor/lodash.min",
 	"../constants/Constants",
-	"com/legstate/fts/app/FlightAcceptanceCockpit/flightacceptancecockpit/dialog/BusyDialogController",
+	"com/legstate/fts/app/FlightAcceptanceCockpit/av/dialog/BusyDialogController",
 	"sap/m/MessageBox",
 	"sap/m/MessageToast"
 ], function (Controller, BaseController, JSONModel, lodash, Constants, BusyDialog, MessageBox, MessageToast) {
 	"use strict";
 
-	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.controller.LobBase", {
+	return BaseController.extend("com.legstate.fts.app.FlightAcceptanceCockpit.av.controller.LobBase", {
 
 		// ========================= Common Setup/Init =========================
 
@@ -734,7 +734,7 @@ sap.ui.define([
 
 		onMoreServicesButtonPressed: function (oEvent) {
 			if (!this._oMoreServicesDialog) {
-				this._oMoreServicesDialog = sap.ui.xmlfragment("com.legstate.fts.app.FlightAcceptanceCockpit.flightacceptancecockpit.fragments.MoreServices", this);
+				this._oMoreServicesDialog = sap.ui.xmlfragment("com.legstate.fts.app.FlightAcceptanceCockpit.av.fragments.MoreServices", this);
 			}
 
 			this.getView().addDependent(this._oMoreServicesDialog);
